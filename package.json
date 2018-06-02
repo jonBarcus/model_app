@@ -2,6 +2,10 @@
   "name": "model_app",
   "private": true,
   "dependencies": {
+    "@rails/webpacker": "3.5",
     "materialize-css": "^1.0.0-rc.1"
+  },
+  "devDependencies": {
+    "webpack-dev-server": "2.11.2"
   }
 }
