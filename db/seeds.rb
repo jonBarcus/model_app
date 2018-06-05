@@ -8,8 +8,18 @@
 
 require 'csv'
 
+MasterCountry.delete_all
+
 csv_text = File.read(Rails.root.join('lib', 'seeds', 'model_countries.csv'))
-csv = CSV.parse(csv_text, :headers=> true, :encoding => 'ISO-8859-1')
+csv = CSV.parse(csv_text.scrub, headers: true)
 csv.each do |row|
-	puts row.to_hash
+	masterCountry = MasterCountry.new
+	masterCountry.name = row['name']
+	masterCountry.un_member = row["un"]
+	masterCountry.al_member = row["al"]
+	masterCountry.oas_member = row["oas"]
+	masterCountry.au_member = row["au"]
+	masterCountry.eu_member = row["eu"]
+	masterCountry.nato_member = row["nato"]
+	masterCountry.save
 end
