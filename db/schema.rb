@@ -34,3 +34,5 @@ ActiveRecord::Schema.define(version: 2018_05_31_160259) do
   end
 
 end
+
+# TODO See Chapter 4 of Rails, Angular, Postgres, and Bootstrap to learn about using postgres indexes
