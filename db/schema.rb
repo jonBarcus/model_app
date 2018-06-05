@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_06_05_211124) do
+ActiveRecord::Schema.define(version: 2018_06_05_213038) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,6 +24,18 @@ ActiveRecord::Schema.define(version: 2018_06_05_211124) do
   create_table "country_assignments", force: :cascade do |t|
     t.integer "team_id"
     t.integer "country_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "master_countries", force: :cascade do |t|
+    t.string "name"
+    t.boolean "un_member"
+    t.boolean "al_member"
+    t.boolean "oas_member"
+    t.boolean "au_member"
+    t.boolean "eu_member"
+    t.boolean "nato_member"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
