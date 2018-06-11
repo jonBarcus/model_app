@@ -3,6 +3,13 @@
 </header>
 <section>
 	<% if user_signed_in? %>
+	<%= link_to "Clubs", clubs_path %>
+
+	<% current_user.clubs.each do |club| %>
+	<li>
+		<%= link_to(club.name) %>
+	</li>
+	<% end %>
 	<p>Cool stuff should be here eventually</p>
 	<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
 
