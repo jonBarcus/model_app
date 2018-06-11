@@ -2,6 +2,12 @@
 	<h1>The Model App</h1>
 </header>
 <section>
+	<% if user_signed_in? %>
 	<p>Cool stuff should be here eventually</p>
 	<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+
+	<% else %>
+	<%# TODO not sure if this is necessary or will work, aim is to have a single page %>
+		<%= render "devise/sessions/new.html.erb" %>
+	<% end %>
 </section>
