@@ -13,7 +13,6 @@
 
   <%= form.label :name, "Name" %>
   <%= form.text_field :name %>
-  <% binding.pry_remote %>
   <%= form.hidden_field(:user_id, :value => current_user.id) %>
 
   <div class="actions">
