@@ -3,4 +3,5 @@ class HomeController < ApplicationController
   	@users_clubs = current_user.clubs.order(:updated_at).reverse
 
   end
+
 end

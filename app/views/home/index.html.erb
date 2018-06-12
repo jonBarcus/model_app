@@ -8,7 +8,7 @@
 
 	<% @users_clubs.each do |club| %>
 	<li>
-		<%= link_to(club.name) %>
+		<%= link_to(club.name, controller: :clubs, action: :show, id: club.id) %>
 	</li>
 	<% end %>
 	<p>Cool stuff should be here eventually</p>
