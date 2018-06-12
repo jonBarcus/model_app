@@ -3,9 +3,10 @@
 </header>
 <section>
 	<% if user_signed_in? %>
-	<%= link_to "Clubs", clubs_path %>
+	<%= link_to 'Start a New Club', new_club_path %>
+	<%= link_to "All Your Clubs", clubs_path %>
 
-	<% current_user.clubs.each do |club| %>
+	<% @users_clubs.each do |club| %>
 	<li>
 		<%= link_to(club.name) %>
 	</li>
