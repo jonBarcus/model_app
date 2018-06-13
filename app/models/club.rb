@@ -12,5 +12,5 @@
 class Club < ApplicationRecord
 	belongs_to :user
 
-	has_many :users, through :club_rosters
+	has_many :users, through: :club_rosters
 end
