@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   root to: 'home#index'
 
   resources :clubs
+
+  resource :user do
+  	resources :clubs
+  end
 end

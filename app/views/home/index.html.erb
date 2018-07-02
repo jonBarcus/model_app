@@ -2,8 +2,8 @@
 	<h2>The Model App</h2>
 	<% if user_signed_in? %>
 	<div class="btn-group" role="group">
-		<%= button_to 'Start a New Club', new_club_path, type: "button", class: "btn btn-secondary" %>
-		<%= button_to "All Your Clubs", clubs_path, type: "button", class: "btn btn-secondary" %>
+		<%= button_to 'Start a New Club', new_user_club_path, method: :get, type: "button", class: "btn btn-secondary" %>
+		<%= button_to "All Your Clubs", user_clubs_path, method: :get, type: "button", class: "btn btn-secondary" %>
 	</div>
 
 	<% @users_clubs.each do |club| %>
