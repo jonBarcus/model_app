@@ -11,8 +11,10 @@
     <%= stylesheet_pack_tag "application" %>
   </head>
 
-  <body class="container">
+<!--   <body class="container"> -->
+    <body class="text-center">
     <% if notice.present? %>
+    <%#TODO Error message location/appearances?%>
       <aside class="alert alert-info">
         <%= notice %>
       </aside>
